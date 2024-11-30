@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            background-color: #f2f2f2;
+        }
+
+        .Registration_page{
+            position: relative;
+            background-color: white;
+            width: 30vw;
+            height: 75vh;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            margin: 2px 10px;
+        }
+
+        .heading{
+            font-size: 1.5rem;
+        }
+
+        .form_detail{
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        form label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        form input[type="text"], form input[type="email"], form input[type="password"], form input[type="tel"] {
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form input[type="button"]{
+            padding: 10px;
+            background-color: #087efc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        form input[type="button"]:hover {
+            background-color: #0666cd;
+        }
+
+        #cancel{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #cancel{
+            background-color: #fc2525;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            width: 50px;
+            height: 30px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        #cancel:hover {
+            background-color: #b90606;
+        }
+    </style>
+</head>
+<body>
+    <div class="Registration_page">
+        <div class="nav">
+            <div class="heading">
+                <h2>Registration</h2>
+            </div>
+            <div class="cancel_btn">
+                <button id="cancel"> X </button>
+            </div>
+        </div>
+        <hr>
+        <form action="" class="form_detail">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass" placeholder="Enter your password"> 
+            <input type="button" name="btn" id="btn" value="Submit" onclick="formValidation()" >
+        </form>
+    </div>
+    <script>
+        function formValidation(){
+            const nameVal = document.getElementById("name");
+            // console.log(nameVal.value);
+            const phoneVal = document.getElementById("phone");
+            // console.log(phoneVal.value);
+            const emailVal = document.getElementById("email");
+            // console.log(emailVal.value);
+            const passVal = document.getElementById("pass");
+            // console.log(passVal.value);
+            // console.log(nameVal, phoneVal, emailVal, passVal);
+            
+            if(nameVal.value == "" || phoneVal.value == "" || emailVal.value == "" || passVal.value == "" ){
+                // console.log("all field needs to be filled up")
+                alert("all field needs to be filled up");
+            }else{
+                const SubmitBtn = document.getElementById("btn");
+                SubmitBtn.addEventListener("click", () => {
+                    alert("Name: " + nameVal.value + "\nPhone: " + phoneVal.value + "\nEmail: " + emailVal.value + "\nPassword: " + passVal.value);
+                    window.location.href = "index9.html";
+                })
+
+            }
+        }
+
+
+        const close_btn = document.getElementById("cancel");
+        // console.log(close_btn);
+        close_btn.addEventListener("click", () => {
+            window.location.href = "index9.html"
+        })
+
+
+    </script>
+</body>
+</html>

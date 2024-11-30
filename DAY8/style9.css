@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(152, 231, 231);
+}
+
+.navbar{
+    background-color: #18105f;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav_link button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav_link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+.link_home a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #e33105dd;
+    border-radius: 5px;
+}
+.link_home a:hover {
+    background: #ff6347;
+}
+
+.link_lr{
+    padding: 10px 20px;
+    margin: 15px;
+    display: flex;
+}
+#login_btn {
+    background: #4caf50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+#login_btn:hover {
+    background: #388e3c;
+}
+
+#register_btn {
+    background: #2196f3;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#register_btn:hover {
+    background: #1976d2;
+}
+.main_container {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.main_container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#wel_img {
+    width: 50vw;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}

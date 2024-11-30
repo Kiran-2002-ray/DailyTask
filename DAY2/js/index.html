@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .input-sec, .output-sec {
+            width: 50%;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .input-sec{
+            background-color: aqua;
+            border-right : 2px solid #ddd;
+        }
+        .output-sec{
+            background-color: rgb(117, 94, 177);
+        }
+        h2{
+            text-align: center;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input{
+            width: 80%;
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        button{
+            color: white;
+            background-color: rgb(13, 155, 13);
+            border: none;
+            padding: 20px 40px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: green;
+        }
+
+        .output-sec p{
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-sec">
+            <h2 class="form-group">Enter your Information</h2>
+            <div class="form-group">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your first name">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter your last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="task">Task:</label>
+                <input type="text" name="task" id="task" placeholder="Enter your Daily Task">
+            </div>
+            <div class="form-group">
+                <label for="dt">Date & Time:</label>
+                <input type="datetime-local" name="dt" id="dt" placeholder="Enter your timming">
+            </div>
+            <button type="button" id="submitBtn">Submit</button>
+        </div>
+
+
+        <div class="output-sec">
+            <h2>User Details</h2>
+            <br>
+                <p id="output-fullname"></p>
+                <p id="output-email"></p>
+                <p id="output-task"></p>
+                <p id="output-datetime"></p>
+                
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
